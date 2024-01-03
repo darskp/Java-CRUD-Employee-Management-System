@@ -7,7 +7,19 @@ public class Emp {
   private String department;
   private double salary;
 
-  //getter and setter method // Encapsulation
+
+  
+  //constructor
+  public Emp(int id, String name, int age, String designation, String department, double salary) {
+    this.id = id;
+    this.name = name;
+    this.age = age;
+    this.designation = designation;
+    this.department = department;
+    this.salary = salary;
+}
+
+//getter and setter method // Encapsulation
   public int getId() {
     return id;
   }
@@ -54,5 +66,24 @@ public class Emp {
 
   public void setSalary(double salary) {
     this.salary = salary;
+  }
+
+  @Override
+  public String toString() {
+    return (
+      "Employee Details [id=" +
+      id +
+      ", name=" +
+      name +
+      ", age=" +
+      age +
+      ", designation=" +
+      designation +
+      ", department=" +
+      department +
+      ", salary=" +
+      salary +
+      "]"
+    );
   }
 }
