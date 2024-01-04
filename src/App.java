@@ -29,19 +29,23 @@ public class App {
       switch (choice) {
         case 1:
           System.out.println("Add Employee");
+          services.AddEmployee();
           break;
         case 2:
           System.out.println("View Employee");
-          services.viewAllEmps();
+          services.viewEmp();
           break;
         case 3:
           System.out.println("Update Employee");
+          services.updateEmployee();
           break;
         case 4:
           System.out.println("Delete Employee");
+          services.deleteEmployee();
           break;
         case 5:
           System.out.println("View All Employee");
+           services.viewAllEmps();
           break;
         case 6:
           System.out.println("Thank you for using Application!");
