@@ -15,13 +15,9 @@ public class App {
   }
 
   public static void main(String[] args) throws Exception {
-    // Emp Employee=new Emp();
-    // Employee.setId(10);
-    // System.out.println(Employee.getId());
-    // System.out.println(Employee);
 
     Scanner sc = new Scanner(System.in);
-    Services services = new Services();
+    EmployeeServices services = new Services(); //updcasting
     do {
       App.menu();
       System.out.println("Enter your Choice");

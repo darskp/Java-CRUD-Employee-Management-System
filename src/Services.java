@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Services {
+public class Services extends EmployeeServices{
 
   int id;
   int updateChoice;
@@ -26,16 +26,19 @@ public class Services {
     empSet.add(emp3);
   }
 
-  public void viewAllEmps() {
+  @Override
+  void viewAllEmps() {
     for (Emp emp : empSet) {
       System.out.println(emp);
     }
   }
 
   // 2.view emp
-  public void viewEmp() {
+  @Override
+ void viewEmp() {
     System.out.println("Enter ID: ");
     id = sc.nextInt();
+        found = false;
     for (Emp emp : empSet) {
       if (emp.getId() == id) {
         System.out.println(emp);
@@ -47,6 +50,7 @@ public class Services {
     }
   }
 
+   @Override
   public void updateEmployee() {
     for (Emp emp : empSet) {
       System.out.println(emp);
@@ -54,7 +58,7 @@ public class Services {
 
     System.out.println("Enter ID: ");
     id = sc.nextInt();
-
+    found = false;
     for (Emp emp : empSet) {
       if (emp.getId() == id) {
         found = true;
@@ -101,10 +105,12 @@ public class Services {
   }
 
   //deleteEmployee
+   @Override
   public void deleteEmployee() {
     System.out.println("Enter ID: ");
     id = sc.nextInt();
     Emp empDelete = null;
+    found = false;
     for (Emp emp : empSet) {
       if (emp.getId() == id) {
         found = true;
@@ -120,6 +126,7 @@ public class Services {
   }
 
   //add employee
+   @Override
   public void AddEmployee() {
    System.out.println("Enter id:");
 		id=sc.nextInt();
